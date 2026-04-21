@@ -1,6 +1,6 @@
 cask "hop" do
-  version "0.1.0"
-  sha256 :no_check
+  version "0.2.0"
+  sha256 "0889bfa31a82f62cf749d820dabb2fcc39ec920ef0a238cbc0f6964998f73190"
 
   url "https://github.com/bendns/hop/releases/download/v#{version}/Hop-#{version}.zip"
   name "Hop!"
