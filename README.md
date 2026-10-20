@@ -5,9 +5,10 @@ Homebrew tap for [Hop!](https://github.com/bendns/hop) — a macOS menu bar app 
 ## Install
 
 ```sh
-brew tap bendns/hop
-brew install --cask hop
+brew install --cask bendns/hop/hop-app
 ```
+
+The cask is named `hop-app` because `hop` in Homebrew's official catalog is an unrelated app, and official casks take precedence over taps. Always use the full name `bendns/hop/hop-app`.
 
 ## First launch
 
@@ -16,14 +17,14 @@ Hop is ad-hoc signed. On first launch macOS may refuse to open it. In Finder, ri
 ## Uninstall
 
 ```sh
-brew uninstall --cask hop     # remove the app
-brew untap bendns/hop         # remove this tap
+brew uninstall --cask bendns/hop/hop-app   # remove the app
+brew untap bendns/hop                      # remove this tap
 ```
 
 ## Updating the cask (maintainer notes)
 
 Each release of `bendns/hop`:
 
-1. Tag `vX.Y.Z` on `bendns/hop:main` → the Release workflow publishes `Hop-X.Y.Z.zip`.
+1. Tag `vX.Y.Z` on `bendns/hop:main` (check out `main` first) → the Release workflow publishes `Hop-X.Y.Z.zip`.
 2. Copy the SHA256 from the release workflow output.
-3. Update `Casks/hop.rb`: bump `version`, replace `sha256 :no_check` with the real checksum, commit, push.
+3. Update `Casks/hop-app.rb`: bump `version` and `sha256`, then open a PR.
