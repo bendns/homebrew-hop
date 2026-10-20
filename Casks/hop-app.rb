@@ -1,4 +1,4 @@
-cask "hop" do
+cask "hop-app" do
   version "0.3.0"
   sha256 "3fe05a234828a4444a0f3d5dc390db52e1ed3a04a9f3ec815f35d3b0bf8cbb83"
 
